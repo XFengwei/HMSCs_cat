@@ -1,6 +1,6 @@
 Python scripts for the work of identifiying high-mass starless clumps in the Galactic plane.
 
-From 10861 ATLASGAL clumps, we identify 463 high-mass starless clump (HMSC) candidates with  $|l|\<60\deg$ and $-1<\deg<b<1\deg$.All of these sources have been queried in SIMBAD to make sure they are not associated with any known 
+From 10861 ATLASGAL clumps, we identify 463 high-mass starless clump (HMSC) candidates with  $$|l|\<60\deg$$ and $-1<\deg<b<1\deg$.All of these sources have been queried in SIMBAD to make sure they are not associated with any known 
     star-forming indicator. 
     Young stellar objects were identified from the GLIMPSE catalog 
     using color-based criteria and the associated 
