@@ -4,6 +4,9 @@ from astropy import units as u
 from higal_sedfitter import smooth, fit, higal_beams
 from higal_sedfitter.fit import PixelFitter
 
+# 70, 160, 250, 350 um data downloaded from https://irsa.ipac.caltech.edu/Missions/planck.html
+# 870 um data from https://atlasgal.mpifr-bonn.mpg.de/cgi-bin/ATLASGAL_DATASETS.cgi
+
 # renew header of fits file
 for Herschel_file in glob.glob('Herschel_data/*.fits'):
     hdu = fits.open(Herschel_file)
