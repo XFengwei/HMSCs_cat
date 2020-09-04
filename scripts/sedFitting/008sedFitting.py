@@ -31,14 +31,15 @@ def greybody(nu, nH2=iNh2, Tdust=iTdust, beta=ibeta):
 # test the sedFitting result of single point
 def point_test(x, y):
     # x: pixel num at x coordinate, y: pixel num at y coordinate
-    Tdust_point = Tdust[x][y]
-    Nh2_point = Nh2[x][y]
-    cont070_point = data070[x][y]
-    cont160_point = data160[x][y]
-    cont250_point = data250[x][y]
-    cont350_point = data350[x][y]
-    cont500_point = data500[x][y]
-    cont870_point = data870[x][y]
+    os.chdir('/Users/xufengwei/ATOMS/I16272/ApexHerschel/converted.fits/')
+    Tdust_point = fits.getdata('fitresult.fits/Tdust.fits')[x][y]
+    Nh2_point = fits.getdata('fitresult.fits/Nh2.fits')[x][y]
+    cont070_point = fits.getdata('Herschel_PACS070_converted_smregrid45.fits')[x][y]
+    cont160_point = fits.getdata('Herschel_PACS160_converted_smregrid45.fits')[x][y]
+    cont250_point = fits.getdata('Herschel_PACS250_converted_smregrid45.fits')[x][y]
+    cont350_point = fits.getdata('Herschel_PACS350_converted_smregrid45.fits')[x][y]
+    cont500_point = fits.getdata('Herschel_PACS500_converted_smregrid45.fits')[x][y]
+    cont870_point = fits.getdata('Apex_ATLASGAL870_converted_smregrid45.fits')[x][y]
     datapoint = [cont070_point,cont160_point,cont250_point,cont350_point,cont500_point,cont870_point]
     wavelengths = np.array([70,160,250,350,500,870])*u.um
     frequencies = wavelengths.to(u.Hz, u.spectral()).value.copy()
